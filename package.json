@@ -1,5 +1,5 @@
 {
-  "name": "reactjs-vite-tailwindcss-boilerplate",
+  "name": "deel",
   "description": "This is a boilerplate build with Vite, React 18, TypeScript, Vitest, Testing Library, TailwindCSS 3, Eslint and Prettier.",
   "version": "0.1.0",
   "private": true,
@@ -19,9 +19,18 @@
     "test": "vitest",
     "test:ui": "vitest --ui",
     "lint": "eslint src --max-warnings=0",
-    "typecheck": "tsc --project tsconfig.json --noEmit"
+    "typecheck": "tsc --project tsconfig.json --noEmit",
+    "ionic:build": "pnpm run build",
+    "ionic:serve": "vite dev --host"
   },
   "dependencies": {
+    "@capacitor/app": "5.0.7",
+    "@capacitor/cli": "5.7.0",
+    "@capacitor/core": "5.7.0",
+    "@capacitor/haptics": "5.0.7",
+    "@capacitor/ios": "5.7.0",
+    "@capacitor/keyboard": "5.0.8",
+    "@capacitor/status-bar": "5.0.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
