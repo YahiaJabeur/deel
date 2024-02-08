@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Deel</string>
+    <string name="title_activity_main">Deel</string>
+    <string name="package_name">com.deel.app</string>
+    <string name="custom_url_scheme">com.deel.app</string>
+</resources>

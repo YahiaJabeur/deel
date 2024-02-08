@@ -24,6 +24,7 @@
     "ionic:serve": "vite dev --host"
   },
   "dependencies": {
+    "@capacitor/android": "5.7.0",
     "@capacitor/app": "5.0.7",
     "@capacitor/cli": "5.7.0",
     "@capacitor/core": "5.7.0",
