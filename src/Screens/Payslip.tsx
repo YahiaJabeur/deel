@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 
 const PayslipDetails = () => {
   const { id } = useParams()
@@ -6,6 +6,14 @@ const PayslipDetails = () => {
   return (
     <div>
       <p>Period: {id}</p>
+      <p>Period: {id}</p>
+      <p>Period: {id}</p>
+      <p>Period: {id}</p>
+      <p>Period: {id}</p>
+      <p>Period: {id}</p>
+      <Link to={`/`}>
+        <p>Period: {id}</p>
+      </Link>
     </div>
   )
 }
