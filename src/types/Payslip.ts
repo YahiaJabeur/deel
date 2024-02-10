@@ -1,6 +1,6 @@
 export interface Payslip {
   id: string
-  fromDate: Date
-  toDate: Date
+  fromDate: string
+  toDate: string
   fileUrl: string
 }
