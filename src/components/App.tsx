@@ -1,8 +1,8 @@
-import Home from 'Screens/Home'
-import PayslipDetails from 'Screens/Payslip'
+import { Home } from 'Screens/Home'
+import { PayslipDetails } from 'Screens/PayslipDetails'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
-const App = () => {
+export const App = () => {
   return (
     <BrowserRouter>
       <Routes>
@@ -12,5 +12,3 @@ const App = () => {
     </BrowserRouter>
   )
 }
-
-export default App

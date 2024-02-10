@@ -3,7 +3,7 @@ import { payslipsArray } from 'payslips'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
-const Home = () => {
+export const Home = () => {
   const [payslips] = useState(payslipsArray)
 
   return (
@@ -15,7 +15,7 @@ const Home = () => {
           <li className="my-2" key={id} role="listitem">
             <Link
               to={`/payslip/${id}`}
-              aria-label={`View Payslip for ${fromDate} to ${toDate}`}
+              aria-label={`View Payslip from ${fromDate} to ${toDate}`}
             >
               <PayslipItem fromDate={fromDate} toDate={toDate} />
             </Link>
@@ -25,5 +25,3 @@ const Home = () => {
     </div>
   )
 }
-
-export default Home
