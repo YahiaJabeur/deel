@@ -21,7 +21,10 @@
     "lint": "eslint src --max-warnings=0",
     "typecheck": "tsc --project tsconfig.json --noEmit",
     "ionic:build": "pnpm run build",
-    "ionic:serve": "vite dev --host"
+    "ionic:serve": "vite dev --host",
+    "cap:ios": "npx cap run ios",
+    "cap:android": "npx cap run android",
+    "cap:web": "npx cap run web"
   },
   "dependencies": {
     "@capacitor/android": "5.7.0",
