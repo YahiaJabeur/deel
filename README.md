@@ -1,80 +1,60 @@
-![reactjs-vite-tailwindcss-boilerplate](https://user-images.githubusercontent.com/16243531/217138979-b854309c-4742-4275-a705-f9fec5158217.jpg)
+# Deel
 
-# React Tailwindcss Boilerplate build with Vite
+## Overview
 
-This is a boilerplate build with Vite, React 18, TypeScript, Vitest, Testing Library, TailwindCSS 3, Eslint and Prettier.
+- Payslips Cross Platform Application
 
-## What is inside?
+## Table of Contents
 
-This project uses many tools like:
+- [Installation](#installation)
+- [Usage](#usage)
 
-- [Vite](https://vitejs.dev)
-- [ReactJS](https://reactjs.org)
-- [TypeScript](https://www.typescriptlang.org)
-- [Vitest](https://vitest.dev)
-- [Testing Library](https://testing-library.com)
-- [Tailwindcss](https://tailwindcss.com)
-- [Eslint](https://eslint.org)
-- [Prettier](https://prettier.io)
+## Installation
 
-## Getting Started
+Ensure that you have Node.js and PNPM installed on your machine before proceeding.
 
-### Install
-
-Create the project.
+1. Clone the repository:
 
 ```bash
-npx degit joaopaulomoraes/reactjs-vite-tailwindcss-boilerplate my-app
+git clone https://github.com/your-username/your-project.git
 ```
 
-Access the project directory.
+2. Navigate to the project directory:
 
 ```bash
-cd my-app
+cd your-project
 ```
 
-Install dependencies.
+3. Install dependencies using PNPM:
 
 ```bash
 pnpm install
 ```
 
-Serve with hot reload at <http://localhost:5173>.
+## Usage
 
-```bash
-pnpm run dev
-```
-
-### Lint
-
-```bash
-pnpm run lint
-```
-
-### Typecheck
-
-```bash
-pnpm run typecheck
-```
-
-### Build
+1. Build vite project:
 
 ```bash
 pnpm run build
 ```
 
-### Test
+2. Run ios:
 
 ```bash
-pnpm run test
+pnpm run cap:ios
 ```
 
-View and interact with your tests via UI.
+3. Run Android:
 
 ```bash
-pnpm run test:ui
+pnpm run cap:android
 ```
 
-## License
+4. Run WEB:
 
-This project is licensed under the MIT License.
+```bash
+pnpm run cap:web
+```
+
+We recommend using ionic  [Visual studio code extension](https://marketplace.visualstudio.com/items?itemName=ionic.ionic)
