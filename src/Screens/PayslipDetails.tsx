@@ -2,11 +2,13 @@ import { BackButton } from 'components/BackButton'
 import { Button } from 'components/Button'
 import { payslipsArray } from 'payslips'
 import { useEffect, useState } from 'react'
-import { Link, useNavigate, useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import { Payslip } from 'types/Payslip'
+import { Directory } from '@capacitor/filesystem'
+import toast, { Toaster } from 'react-hot-toast'
+import write_blob from 'capacitor-blob-writer'
 
 export const PayslipDetails = () => {
-  const navigate = useNavigate()
   const { id: payslipId } = useParams()
   const [payslip, setPayslip] = useState<Payslip | undefined>(undefined)
 
@@ -23,6 +25,24 @@ export const PayslipDetails = () => {
   }
 
   const { id, fromDate, toDate, fileUrl } = payslip
+
+  const downloadFile = async () => {
+    const response = await fetch(fileUrl)
+    const blob = await response.blob()
+    await write_blob({
+      path: './payslip.pdf',
+      directory: Directory.Data,
+      blob: blob,
+      fast_mode: true,
+      recursive: true,
+      on_fallback(error) {
+        toast.error(error.message, { position: 'bottom-center' })
+      }
+    }).then(function () {
+      toast.success('Downloaded successfully', { position: 'bottom-center' })
+    })
+  }
+
   return (
     <div className="p-2">
       <div className="flex items-center gap-4">
@@ -50,10 +70,11 @@ export const PayslipDetails = () => {
             <dd className="text-gray-700 sm:col-span-2">{toDate}</dd>
           </div>
           <div className="grid grid-cols-1 gap-1 py-3 sm:grid-cols-3 sm:gap-4">
-            <Button onClick={() => navigate('/')}>Download PDF</Button>
+            <Button onClick={downloadFile}>Download PDF</Button>
           </div>
         </dl>
       </div>
+      <Toaster />
     </div>
   )
 }

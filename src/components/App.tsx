@@ -1,5 +1,5 @@
-import { Home } from 'Screens/Home'
-import { PayslipDetails } from 'Screens/PayslipDetails'
+import { Home } from 'screens/Home'
+import { PayslipDetails } from 'screens/PayslipDetails'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 export const App = () => {

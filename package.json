@@ -28,12 +28,15 @@
     "@capacitor/app": "5.0.7",
     "@capacitor/cli": "5.7.0",
     "@capacitor/core": "5.7.0",
+    "@capacitor/filesystem": "^5.2.1",
     "@capacitor/haptics": "5.0.7",
     "@capacitor/ios": "5.7.0",
     "@capacitor/keyboard": "5.0.8",
     "@capacitor/status-bar": "5.0.7",
+    "capacitor-blob-writer": "^1.1.14",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-hot-toast": "^2.4.1",
     "react-router-dom": "^6.22.0"
   },
   "devDependencies": {
